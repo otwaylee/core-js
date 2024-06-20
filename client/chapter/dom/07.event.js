@@ -102,9 +102,12 @@ function throttle(callback,limit = 200){
 
 
 
-ground.addEventListener('mousemove',throttle(handleMove))
+// ground.addEventListener('mousemove',throttle(handleMove))
 
 
-
+// addClass('.ground',['a','b','c'])
+// addClass('.ground','a','b','c')
+// addClass('.ground','a,b,c')
+// addClass('.ground',{a:'one',b:'two'})
 
 // throttle(수도꼭지), debounce(공 튀김 방지) 
