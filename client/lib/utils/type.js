@@ -15,3 +15,4 @@ export const isUndefined = data => typeOf(data) === 'undefined'
 export function isNumericString(data){
   return isNaN(Number(data))
 }
+

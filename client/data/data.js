@@ -1,3 +1,5 @@
+
+
 export default function jujeobData(nickName){
   return [
     `대한민국 ${nickName} 보유국`,
@@ -11,3 +13,28 @@ export default function jujeobData(nickName){
     `짜장면한테 ${nickName} 음악을 들려 줬더니 짜장면이 저절로 비벼졌습니다.`
   ]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
