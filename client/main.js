@@ -1,36 +1,22 @@
 
+class MyElement extends HTMLElement{
 
-import { 
-  getNode,
-  getStorage,
-  setStorage,
-  deleteStorage,
-  clearContents,
- } from "./lib/index.js";
+  constructor(){
+    super();
+  }
 
+  connectedCallback(){
+    console.log('탄생함') //* 태어난 시점을 체크하는 것
+  }
 
- const textField = getNode('#textField')
- const clear = getNode('button[data-name= "clear"]')
+  disconnectedCallback(){
+    console.log('죽음') //* 브라우저에서 사라졌을 때
+  }
+}
 
- getStorage('text')
- .then((res) => {
-  textField.value = res;
- } )
+customElements.define('c-element', MyElement)
 
- function handleTextField(){
-  console.log('입력중..')
+const elem = document.createElement('c-element')
+const app = document.getElementById('app')
 
-  const value = this.value;
-
-  setStorage('text', value)
- }
- 
-
-
- function handleClear(){
-  deleteStorage('text')
-  clearContents(textField)
- }
- 
- textField.addEventListener('input', handleTextField)
- clear.addEventListener('click', handleClear)
+app.appendChild(elem)
